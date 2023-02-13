@@ -2,14 +2,15 @@
 
 ## Assignment Description
 
-Read the documentation for `pthread_cancel` by typing `man pthread_cancel` on the Linux command line. Using this information and the model provided in [threads.c](threads.c), write a program where the initial (main) thread creates a second thread. The main thread should read input from the keyboard, waiting until the user presses the Enter key. At that point, it should kill off the second thread and print out a message reporting that it has done so. Meanwhile, the second thread should be in an infinite loop, each time around sleeping 3 seconds and then printing out a message. Once the enter key has been pressed, the main thread should wait for 5 seconds to demonstrate that the second thread has been successfully killed and then exit.
+Posix systems have a powerful tool for us to use called pthreads. These allow us to do multithreading very easily. I've given you three text files, and one C file. Please use this information and the model provided in [threads.c](threads.c), write a program where the initial (main) thread creates three threads, and has each of those threads read from one of the three given text files ([File1.txt](File1.txt), [File2.txt](File2.txt), [File3.txt](File3.txt)). Then, have each thread output the entire contents of each file to the main output. This should all happen simultaneously. If the output looks a little funny, that's okay.
   
 This program should be coded in C, using the [gcc C compiler](https://gcc.gnu.org/) on POSIX (i.e. Linux or MacOS) systems.
   
 Answer the following questions in a long-form comment at the top of your code:
 
-1. Explain what `pthread` is doing in this program. Be specific.
-2. Explain why the sleeping thread can print its periodic messages while the main thread is waiting for keyboard input.
+1. Explain what the pthreads are doing in this program
+2. Explain the advantage of using multiple pthreads as opposed to one single thread when doing file I/O
+3. Explain why the output looks the way that it looks.
 
 ### Tips
 
@@ -27,3 +28,6 @@ Submit your files through your git repository. Your submission must follow the f
 
 * Do not use compression on your files
 * Make sure that all significant code is *commented* with your own explanations--even the code I have provided to you
+
+
+## Grading scale
